@@ -1,0 +1,20 @@
+{
+    "name": "ospina/easy-sql",
+    "description": "Managing your Mysql DB with PHP never was that easy",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ospina\\EasySQL\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastian Ospina",
+            "email": "sebastianospinacontacto@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "ospina/smart-query-builder": "^1.0"
+    }
+}
