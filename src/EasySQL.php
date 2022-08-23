@@ -31,9 +31,9 @@ class EasySQL
      * @param $database
      * @param $environment
      */
-    public function __construct($database, $environment)
+    public function __construct($database, $environment, $envPath = '/../../../../')
     {
-        $settings = new MysqlConnectionSettings($environment);
+        $settings = new MysqlConnectionSettings($environment,$envPath);
         $mysqli = new mysqli($settings->host, $settings->user, $settings->password, $database);
         $mysqli->set_charset('utf8'); //VERY IMPORTANTTT
         self::verifyConnectionErrors($mysqli);

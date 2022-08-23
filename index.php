@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Ospina\EasySQL\EasySQL;
 
-$easySQL = new EasySQL('encuesta_graduados', 'local');
+$easySQL = new EasySQL('encuesta_graduados', 'local', '/../');
 //Query
 $result = $easySQL->table('form_answers')->select(['*'])->where('is_graduated', '=', 0)->get();
 /*$result = $easySQL->table('form_answers')

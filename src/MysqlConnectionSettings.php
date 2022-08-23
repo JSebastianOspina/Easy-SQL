@@ -4,7 +4,7 @@ namespace Ospina\EasySQL;
 
 use Dotenv\Dotenv;
 
-require  'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class MysqlConnectionSettings
 {
@@ -13,10 +13,10 @@ class MysqlConnectionSettings
     public string $user;
     public string $password;
 
-    public function __construct(string $environment = 'local')
+    public function __construct(string $environment, string $envPath)
     {
 
-        $dotenv = Dotenv::createUnsafeImmutable(__DIR__.'/../');
+        $dotenv = Dotenv::createUnsafeImmutable(__DIR__ . $envPath);
         $dotenv->load();
 
         $this->host = $environment === 'local' ? getenv('DB_LOCAL_HOST') : getenv('DB_PROD_HOST');
