@@ -25,6 +25,9 @@ class EasySQL
      */
     private bool $isSelect = false;
 
+    /**
+     * @var null
+     */
     private $lastResult = null;
 
     /**
@@ -33,7 +36,7 @@ class EasySQL
      */
     public function __construct($database, $environment, $envPath = '/../../../../')
     {
-        $settings = new MysqlConnectionSettings($environment,$envPath);
+        $settings = new MysqlConnectionSettings($environment, $envPath);
         $mysqli = new mysqli($settings->host, $settings->user, $settings->password, $database);
         $mysqli->set_charset('utf8'); //VERY IMPORTANTTT
         self::verifyConnectionErrors($mysqli);
@@ -97,6 +100,27 @@ class EasySQL
     }
 
     /**
+     * @param $var
+     * @return $this
+     */
+    public function isNull($var): EasySQL
+    {
+        $this->smartQueryBuilder->isNull($var);
+        return $this;
+    }
+
+    /**
+     * @param $var
+     * @return $this
+     */
+    public function isNotNull($var): EasySQL
+    {
+        $this->smartQueryBuilder->isNull($var);
+        return $this;
+    }
+
+
+    /**
      * @param array $columns
      * @return bool
      */
@@ -134,6 +158,9 @@ class EasySQL
         return $execute;
     }
 
+    /**
+     * @return bool
+     */
     private function verifyIsRetrieveQuery(): bool
     {
         return $this->isSelect === true;
