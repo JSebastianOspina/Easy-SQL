@@ -70,16 +70,16 @@
         },
         {
             "name": "ospina/smart-query-builder",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JSebastianOspina/Smart-Query-Builder.git",
-                "reference": "258a43ab85a79acf2354345fc68034d5fc501a66"
+                "reference": "6424fdc28999acf83623bd147654bcd8c3116fa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JSebastianOspina/Smart-Query-Builder/zipball/258a43ab85a79acf2354345fc68034d5fc501a66",
-                "reference": "258a43ab85a79acf2354345fc68034d5fc501a66",
+                "url": "https://api.github.com/repos/JSebastianOspina/Smart-Query-Builder/zipball/6424fdc28999acf83623bd147654bcd8c3116fa2",
+                "reference": "6424fdc28999acf83623bd147654bcd8c3116fa2",
                 "shasum": ""
             },
             "type": "library",
@@ -98,9 +98,9 @@
             "description": "Easy Query Builder for php",
             "support": {
                 "issues": "https://github.com/JSebastianOspina/Smart-Query-Builder/issues",
-                "source": "https://github.com/JSebastianOspina/Smart-Query-Builder/tree/1.0.3"
+                "source": "https://github.com/JSebastianOspina/Smart-Query-Builder/tree/1.0.4"
             },
-            "time": "2022-08-23T22:06:22+00:00"
+            "time": "2022-08-29T15:56:10+00:00"
         },
         {
             "name": "phpoption/phpoption",

@@ -4,8 +4,6 @@ namespace Ospina\EasySQL;
 
 use Dotenv\Dotenv;
 
-require 'vendor/autoload.php';
-
 class MysqlConnectionSettings
 {
 
