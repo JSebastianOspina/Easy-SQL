@@ -2,6 +2,7 @@
 
 namespace Ospina\EasySQL;
 
+use Exception;
 use JsonException;
 use mysqli;
 use mysqli_result;
@@ -137,6 +138,15 @@ class EasySQL
         }
         $this->lastResult = ['msg' => 'The last update statement was executed successfully'];
         return $execute;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function limit(int $limit, int $offset = 0): EasySQL
+    {
+        $this->smartQueryBuilder->limit($limit, $offset);
+        return $this;
     }
 
     /**

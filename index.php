@@ -5,7 +5,7 @@ use Ospina\EasySQL\EasySQL;
 
 $easySQL = new EasySQL('encuesta_graduados', 'local', '/../');
 //Query
-$result = $easySQL->table('form_answers')->select(['*'])->where('is_graduated', '=', 0)->get();
+$result = $easySQL->table('form_answers')->select(['*'])->where('is_graduated', '=', 0)->limit(5)->get();
 /*$result = $easySQL->table('form_answers')
     ->where('identification_number', '=', '1032425533')
     ->update(['is_graduated' => 1]);*/
